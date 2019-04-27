@@ -19,6 +19,8 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
+Route::get('{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
 Auth::routes();
 
