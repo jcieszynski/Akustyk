@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+        @include('flash::message')
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -54,14 +55,20 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
+                                    {{ __('Zaloguj') }}
                                 </button>
-
+                                <hr>
+                                <div class="form-group row mb-0">
+                                    <div class="col-md-8 offset-md-4">
+                                        <button type="button" class="btn btn-primary" onclick="window.location='{{ url("/auth/redirect/google") }}'">Google</button>
+                                        <button type="button" class="btn btn-primary" onclick="window.location='{{ url("/auth/redirect/facebook") }}'">Facebook</button>
+                                    </div>
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+                                </div>
                             </div>
                         </div>
                     </form>
