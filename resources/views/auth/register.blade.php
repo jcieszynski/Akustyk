@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    @include('flash::message')
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -66,6 +67,10 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                <div class="col-md-8 offset-md-4">
+                                    <button type="button" class="btn btn-primary" onclick="window.location='{{ url("/auth/redirect/google") }}'">Google</button>
+                                    <button type="button" class="btn btn-primary" onclick="window.location='{{ url("/auth/redirect/facebook") }}'">Facebook</button>
+                                </div>
                             </div>
                         </div>
                     </form>

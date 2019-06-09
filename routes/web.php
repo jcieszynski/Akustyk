@@ -15,13 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes(['verify' => true]);
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
-Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
-Route::get('{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
-Auth::routes();
+Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
+Route::get('/callback/{provider}', 'SocialController@callback');
 
 Route::get('/home', 'HomeController@index')->name('home');

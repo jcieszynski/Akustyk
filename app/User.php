@@ -6,7 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends \TCG\Voyager\Models\User
+class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
 {
     use Notifiable;
 
@@ -16,7 +16,7 @@ class User extends \TCG\Voyager\Models\User
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','provider','provider_id','avatar'
+        'name', 'email', 'password','provider','provider_id','avatar','email_verified_at'
     ];
 
     /**
