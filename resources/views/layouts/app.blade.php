@@ -31,11 +31,13 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
+                    <div class="collapse navbar-collapse">
+                        <a class="dropdown-item" href="lang/en" id="en">English</a>
+                        <a class="dropdown-item" href="lang/pl" id="pl">Polish</a>
+                    </div>
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
