@@ -114,6 +114,7 @@ return [
     'uploaded'             => 'Nie udało się wgrać pliku :attribute.',
     'url'                  => 'Format :attribute jest nieprawidłowy.',
     'uuid'                 => ':attribute musi być poprawnym identyfikatorem UUID.',
+    'email_not_exist' => 'Adres email nie istnieje',
 
     /*
     |--------------------------------------------------------------------------
