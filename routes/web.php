@@ -28,3 +28,5 @@ Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
 Route::get('/callback/{provider}', 'SocialController@callback');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('contact-us', 'ContactFormController@ContactForm');
+Route::post('contact-us', ['as'=>'contactForm.store','uses'=>'ContactFormController@contactFormPost']);
