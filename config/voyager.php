@@ -100,19 +100,19 @@ return [
         /*
          * Set whether or not the multilingual is supported by the BREAD input.
          */
-        'enabled' => false,
+        'enabled' => true,
 
         /*
          * Select default language
          */
-        'default' => 'en',
+        'default' => 'pl',
 
         /*
          * Select languages that are supported.
          */
         'locales' => [
             'en',
-            //'pt',
+            'pl',
         ],
     ],
 
@@ -184,7 +184,7 @@ return [
     |
     */
 
-    'primary_color' => '#22A7F0',
+    'primary_color' => '#FF0000',
 
     'show_dev_tips' => true, // Show development tip "How To Use:" in Menu and Settings
 

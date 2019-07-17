@@ -145,5 +145,7 @@ return [
     */
 
     'attributes' => [
+        'message' => 'wiadomość',
+        'user' => 'nazwa użytkownika',
     ],
 ];

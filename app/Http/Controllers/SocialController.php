@@ -25,12 +25,12 @@ class SocialController extends Controller
         }
         $user = $this->createOrFindUser($socialUser, $provider);
         if (!$user) {
-            flash('Konto z tym email istnieje')->warning();
+            flash(trans('messages.acc_email_exist'))->warning();
             return redirect()->to('/login');
 
         }
         auth()->login($user, true);
-        flash('Zalogowano pomyślnie')->success();
+        flash(trans('login_success'))->success();
         return redirect()->to('/home');
     }
 
