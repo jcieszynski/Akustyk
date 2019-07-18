@@ -4,8 +4,57 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "418f056c9ba2f8f44f0f1ec157c3db5a",
+    "content-hash": "bbdff35875fa545bfdb2f543a173a5db",
     "packages": [
+        {
+            "name": "alariva/laravel-email-domain-blacklist",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alariva/laravel-email-domain-blacklist.git",
+                "reference": "e13c5b0e45015f27dbcf6632aa90edc3d98d8de1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alariva/laravel-email-domain-blacklist/zipball/e13c5b0e45015f27dbcf6632aa90edc3d98d8de1",
+                "reference": "e13c5b0e45015f27dbcf6632aa90edc3d98d8de1",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.6 || ^5.5 || ^5.4 || ^5.3 || ^5.2 || ^5.1",
+                "laravel/framework": "^5.6 || ^5.5 || ^5.4 || ^5.3 || ^5.2 || ^5.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.1",
+                "orchestra/testbench": "^3.6",
+                "phpunit/phpunit": "^7.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Alariva\\EmailDomainBlacklist\\EmailDomainBlacklistServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Alariva\\EmailDomainBlacklist\\": "src/Alariva/EmailDomainBlacklist"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ariel Vallese",
+                    "email": "alariva@gmail.com"
+                }
+            ],
+            "description": "A Laravel package for adding email domain blacklist validation rule",
+            "time": "2018-08-17T00:37:16+00:00"
+        },
         {
             "name": "arrilot/laravel-widgets",
             "version": "3.13.0",
