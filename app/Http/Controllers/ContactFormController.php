@@ -23,7 +23,7 @@ class ContactFormController extends Controller
 
         $this->validate($request, [
             'user' => 'required|string|min:3|max:50',
-            'email' => 'required|email|max:100',
+            'email' => 'required|email|blacklist|max:100',
             'message' => 'required|min:10',
         ]);
         $browser = $agent->browser();
@@ -36,7 +36,7 @@ class ContactFormController extends Controller
         $userInfo = trans('parameters.browser') . $browser . ',' . trans('parameters.browser_version') . $browserVersion . ',' . trans('parameters.os') . $platform . ',' . trans('parameters.os_ver') .
             $platformVersion . ',' . trans('parameters.device') . $device . ',' . trans('parameters.languages') . implode(',', $languages);
         if (($users = ContactForm::where('ip_address', $request->ip())->latest('created_at')->first()) && !Auth::check()) {
-            if (Carbon::now()->diffInHours($users->created_at) < 1) {
+            if (Carbon::now()->diffInHours($users->created_at) <= 1) {
                 flash( trans('messages.msg_after_1h'))->warning();
                 return redirect()->to('/contact-us');
             }

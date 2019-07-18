@@ -26,6 +26,13 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        $schedule->command('blacklist:update-email-domains')
+            ->monthly()
+            ->saturdays()
+            ->at('06:00')
+            ->withoutOverlapping()
+            ->sendOutputTo(storage_path('logs/email-domains-blacklist.txt'));
     }
 
     /**

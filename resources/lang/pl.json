@@ -46,5 +46,6 @@
   "You got message from": "Masz wiadomość od ",
   "Email": "Adres Email",
   "Confirm": "Zatwierdź",
-  "Contact with us": "Skontaktuj się z nami"
+  "Contact with us": "Skontaktuj się z nami",
+  "The domain for :attribute is not allowed. Please use another email address.": "Domena dla :attribute jest niedozwolona. Użyj innego adresu email"
 }
