@@ -73,6 +73,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div>
+                            {!! NoCaptcha::display(['data-theme' => 'light']) !!}
+                            @if ($errors->has('g-recaptcha-response'))
+                                <span class="text-danger">
+                                    <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                </span>
+                            @endif
+                        </div>
                     </form>
                 </div>
             </div>

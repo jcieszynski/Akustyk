@@ -38,7 +38,14 @@
         <div class="form-group">
             <button class="btn btn-success">{{ __('Confirm') }}</button>
         </div>
+        <div>
+            {!! NoCaptcha::display(['data-theme' => 'light']) !!}
+            @if ($errors->has('g-recaptcha-response'))
+                <span class="text-danger">
+                    <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                </span>
+            @endif
+        </div>
         {!! Form::close() !!}
-
     </div>
 @endsection
