@@ -25,6 +25,7 @@ class ContactFormController extends Controller
             'user' => 'required|string|min:3|max:50',
             'email' => 'required|email|blacklist|max:100',
             'message' => 'required|min:10',
+            'g-recaptcha-response' => 'required|captcha'
         ]);
         $browser = $agent->browser();
         $browserVersion = $agent->version($browser);
