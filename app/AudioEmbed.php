@@ -12,12 +12,17 @@ class AudioEmbed extends Model
 
     public function save(array $options = [])
     {
-        $link = Embed::create($this->embed);
-        $this->embed = $link->code;
-        $this->url = $link->url;
-        if (!$this->author && app('VoyagerAuth')->user()) {
-            $this->author = app('VoyagerAuth')->user()->name;
+        try {
+            $link = Embed::create($this->url);
+            $this->embed = $link->code;
+            $this->url = $link->url;
+            if (!$this->author && app('VoyagerAuth')->user()) {
+                $this->author = app('VoyagerAuth')->user()->name;
+            }
+        } catch (\Exception $exception) {
+            return;
         }
+
         parent::save();
     }
 

@@ -31,4 +31,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('contact-us', 'ContactFormController@ContactForm');
 Route::post('contact-us', ['as'=>'contactForm.store','uses'=>'ContactFormController@contactFormPost']);
 Route::get('/music', 'AudioController@index')->name('music');
+Route::get('/gallery', 'EquipmentGalleryController@index')->name('gallery');
 

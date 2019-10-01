@@ -3,7 +3,9 @@
     @include('flash::message')
     <div class="container">
         <h1>{{ __('Contact with us') }}</h1>
-
+<p>Koło naukowe Akustyk PWSZ w Elblągu</p>
+        <p>ul. Wojska Polskiego 1 82-300 Elbląg</p>
+        <p>Pokój nr 010</p>
         @if(Session::has('success'))
             <div class="alert alert-success">
                 {{Session::get('success')}}
