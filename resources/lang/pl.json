@@ -47,5 +47,18 @@
   "Email": "Adres Email",
   "Confirm": "Zatwierdź",
   "Contact with us": "Skontaktuj się z nami",
-  "The domain for :attribute is not allowed. Please use another email address.": "Domena dla :attribute jest niedozwolona. Użyj innego adresu email"
+  "Avatar of user": "Awatar użytkownika",
+  "The domain for :attribute is not allowed. Please use another email address.": "Domena dla :attribute jest niedozwolona. Użyj innego adresu email",
+  "Categories": "Kategorie",
+  "Music - Akustyk PWSZ": "Muzyka - Akustyk PWSZ",
+  "Page not found - Akustyk PWSZ": "Nie znaleziono strony - Akustyk PWSZ",
+  "Set Language": "Ustaw język",
+  "Polish": "Polski",
+  "English": "Angielski",
+  "Music": "Muzyka",
+  "Gallery": "Galeria",
+  "Contact": "Kontakt",
+  "Home": "Panel",
+  "Management panel": "Panel zarządzania"
+
 }

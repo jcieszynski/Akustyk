@@ -19099,6 +19099,25 @@ module.exports = function(module) {
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+$("#menu-toggle").click(function (e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
+var btn = $('#button');
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+btn.on('click', function (e) {
+  e.preventDefault();
+  $('html, body').animate({
+    scrollTop: 0
+  }, '300');
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

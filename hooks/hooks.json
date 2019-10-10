@@ -5,7 +5,7 @@
             "name": "extended-bread-form-fields",
             "description": "Extended FormFields hook interface to Voyager BREAD",
             "version": "v0.2-beta",
-            "enabled": true
+            "enabled": false
         }
     }
 }

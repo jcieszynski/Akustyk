@@ -13,7 +13,6 @@
         "anhskohbo/no-captcha": "^3.0",
         "caouecs/laravel-lang": "~4.0",
         "embed/embed": "^3.4",
-        "extended-bread-form-fields": "^0.2.0@beta",
         "fideloper/proxy": "^4.0",
         "jenssegers/agent": "^2.6",
         "laracasts/flash": "^3.0",
