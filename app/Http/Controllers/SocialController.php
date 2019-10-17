@@ -30,7 +30,7 @@ class SocialController extends Controller
 
         }
         auth()->login($user, true);
-        flash(trans('login_success'))->success();
+        flash(trans('messages.login_success'))->success();
         return redirect()->to('/home');
     }
 

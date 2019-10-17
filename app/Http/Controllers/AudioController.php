@@ -3,12 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\AudioEmbed;
+use App\MusicCategory;
 
 class AudioController extends Controller
 {
+
     public function index()
     {
-        $audio = AudioEmbed::all();
-        return view('audio')->with(['audio' => $audio]);
+        $audio = AudioEmbed::paginate(10);
+        $category = MusicCategory::all();
+        return view('audio')->with(compact('audio', 'category'));
     }
 }
