@@ -127,19 +127,19 @@ img {
                 padding-right: 5px;
             }
         }
+    }
 
-        &-links {
-            @extend .footer-about;
+    &-links {
+        @extend .footer-about;
 
-            & a {
+        & a {
+            color: #fff;
+            color: rgba(255, 255, 255, 0.8);
+            border: 0;
+
+            &:hover, &:focus {
                 color: #fff;
-                color: rgba(255, 255, 255, 0.8);
-                border: 0;
 
-                &:hover, &:focus {
-                    color: #fff;
-
-                }
             }
         }
     }
@@ -206,6 +206,9 @@ img {
     padding: 50px 50px 278px 50px;
 }
 
+.verify-container {
+    padding: 50px 50px 189px 50px;
+}
 
 body {
     font-size: 15px;
@@ -323,14 +326,6 @@ ul.navbar-nav {
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .navbar-user {
-        flex-direction: row;
-    }
-
-}
-
-
 @media (max-width: 767px) {
 
     .navbar.navbar-no-bg {
@@ -407,4 +402,78 @@ ul.navbar-nav {
         opacity: 1;
         visibility: visible;
     }
+}
+
+.verify {
+    color: $blue;
+}
+
+.button-post {
+    margin: 0 0 7px 0 !important;
+}
+
+a.btn {
+    border-radius: .25rem;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    color: #fff;
+}
+
+a.btn:hover {
+    border-radius: .25rem;
+}
+
+.btn:focus, .btn:active, button:focus, button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#image-gallery .modal-footer {
+    display: block;
+}
+
+.thumb {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.container-row {
+    color: #35373a;
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+}
+
+.commenents-list {
+    background-color: $comments-list;
+    border-radius: 7px;
+    padding-left: 9px;
+    padding-top: 10px;
+    border: 1px black solid;
+}
+
+.message-body{
+    background: $comments-list;
+    border: 1px #1f2225 solid;
+    border-radius: 6px;
+}
+
+.markdown-color{
+    color: $red;
+}
+
+.card-margin {
+    margin-top: 2rem;
+}
+
+.card-img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card-title {
+    margin-bottom: 0.3rem;
+}
+
+.card-footer {
+    font-size: 0.8rem;
 }

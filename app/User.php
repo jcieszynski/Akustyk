@@ -2,13 +2,16 @@
 
 namespace App;
 
+use GuzzleHttp\Psr7\Uri;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravelista\Comments\Commenter;
+use TCG\Voyager\Traits\VoyagerUser;
 
 class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
 {
-    use Notifiable;
+    use Notifiable, Commenter;
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +19,7 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','provider','provider_id','avatar','email_verified_at'
+        'name', 'email', 'password', 'provider', 'provider_id', 'avatar', 'email_verified_at', 'last_login'
     ];
 
     /**
@@ -25,7 +28,7 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token','provider_id'
+        'password', 'remember_token', 'provider_id'
     ];
 
     /**
@@ -36,4 +39,17 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function getAvatarPath($id)
+    {
+        $user = \DB::table('users')->where('id', $id)->first();
+        if ($user) {
+            if (strpos($user->avatar, 'users')) {
+                $avatarPath = (\Voyager::image($user->avatar));
+                return $avatarPath;
+            }
+            return $user->avatar;
+        } else return false;
+
+    }
 }

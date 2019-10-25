@@ -9,6 +9,13 @@ use Carbon\Carbon;
 
 class SocialController extends Controller
 {
+    protected function socialLastLogin(User $user)
+    {
+        $user->update([
+            'last_login' => Carbon::now()->toDateTimeString(),
+        ]);
+    }
+
     public function redirect($provider)
     {
         return Socialite::driver($provider)->redirect();
@@ -30,8 +37,9 @@ class SocialController extends Controller
 
         }
         auth()->login($user, true);
+        $this->socialLastLogin($user);
         flash(trans('messages.login_success'))->success();
-        return redirect()->to('/home');
+        return redirect()->to('/');
     }
 
     private function createOrFindUser($socialUser, $provider)
@@ -53,9 +61,9 @@ class SocialController extends Controller
             'avatar' => $socialUser->avatar,
             'provider' => $provider,
             'provider_id' => $socialUser->id,
+            'last_login' => Carbon::now()->toDateTimeString(),
         ]);
 
 
     }
-
 }

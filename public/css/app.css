@@ -10750,7 +10750,7 @@ img {
 }
 
 .footer-about,
-.footer-contact-links,
+.footer-links,
 .footer-contact {
   border-color: #172843;
   border-radius: 20px;
@@ -10759,7 +10759,7 @@ img {
 }
 
 .footer-about img.logo-footer,
-.footer-contact-links img.logo-footer,
+.footer-links img.logo-footer,
 .footer-contact img.logo-footer {
   margin-top: 7px;
   display: block;
@@ -10783,14 +10783,14 @@ img {
   }
 }
 
-.footer-contact-links a {
+.footer-links a {
   color: #fff;
   color: rgba(255, 255, 255, 0.8);
   border: 0;
 }
 
-.footer-contact-links a:hover,
-.footer-contact-links a:focus {
+.footer-links a:hover,
+.footer-links a:focus {
   color: #fff;
 }
 
@@ -10849,6 +10849,10 @@ img {
 
 .error-404 {
   padding: 50px 50px 278px 50px;
+}
+
+.verify-container {
+  padding: 50px 50px 189px 50px;
 }
 
 body {
@@ -10968,12 +10972,6 @@ ul.navbar-nav {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .navbar-user {
-    flex-direction: row;
-  }
-}
-
 @media (max-width: 767px) {
   .navbar.navbar-no-bg {
     background: #444;
@@ -11046,5 +11044,82 @@ ul.navbar-nav {
 #button.show {
   opacity: 1;
   visibility: visible;
+}
+
+.verify {
+  color: #3490dc;
+}
+
+.button-post {
+  margin: 0 0 7px 0 !important;
+}
+
+a.btn {
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+
+a.btn:hover {
+  border-radius: 0.25rem;
+}
+
+.btn:focus,
+.btn:active,
+button:focus,
+button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#image-gallery .modal-footer {
+  display: block;
+}
+
+.thumb {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.container-row {
+  color: #35373a;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+}
+
+.commenents-list {
+  background-color: #b5aeae1f;
+  border-radius: 7px;
+  padding-left: 9px;
+  padding-top: 10px;
+  border: 1px black solid;
+}
+
+.message-body {
+  background: #b5aeae1f;
+  border: 1px #1f2225 solid;
+  border-radius: 6px;
+}
+
+.markdown-color {
+  color: #e3342f;
+}
+
+.card-margin {
+  margin-top: 2rem;
+}
+
+.card-img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.card-title {
+  margin-bottom: 0.3rem;
+}
+
+.card-footer {
+  font-size: 0.8rem;
 }
 

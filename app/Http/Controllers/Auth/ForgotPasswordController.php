@@ -40,7 +40,7 @@ class ForgotPasswordController extends Controller
         } else {
             $response = $this->broker()->sendResetLink($request->only('email'));
         }
-        if ($response === \Password::sendResetLink()) {
+        if ($response === \Password::sendResetLink($request->only('email'))) {
             return back()->with('status', trans($response));
 
         }

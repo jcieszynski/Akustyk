@@ -61,20 +61,15 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                                <div class="col-md-8 offset-md-4">
-                                    <button type="button" class="btn btn-primary" onclick="window.location='{{ url("/auth/redirect/google") }}'">Google</button>
-                                    <button type="button" class="btn btn-primary" onclick="window.location='{{ url("/auth/redirect/facebook") }}'">Facebook</button>
-                                </div>
-                            </div>
-                        </div>
                         <div>
+                         <button type="submit" class="btn btn-lg btn-secondary btn-block">{{ __('Register') }}</button>
+                                    <button type="button" class="btn btn-lg btn-danger btn-block" onclick="window.location='{{ url("/auth/redirect/google") }}'"><i class="fab fa-google"></i>  Google</button>
+
+                            <button type="button" class="btn btn-lg btn-primary btn-block" onclick="window.location='{{ url("/auth/redirect/facebook") }}'"><i class="fab fa-facebook-f"></i>  Facebook</button>
+                        </div>
+                        <div style="margin-top: 10px;display: inline-block;">
                             {!! NoCaptcha::display(['data-theme' => 'light']) !!}
+                        </div>
                             @if ($errors->has('g-recaptcha-response'))
                                 <span class="text-danger">
                                     <strong>{{ $errors->first('g-recaptcha-response') }}</strong>

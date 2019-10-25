@@ -51,26 +51,15 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Zaloguj') }}
-                                </button>
-                                <hr>
-                                <div class="form-group row mb-0">
-                                    <div class="col-md-8 offset-md-4">
-                                        <button type="button" class="btn btn-primary" onclick="window.location='{{ url("/auth/redirect/google") }}'">Google</button>
-                                        <button type="button" class="btn btn-primary" onclick="window.location='{{ url("/auth/redirect/facebook") }}'">Facebook</button>
-                                    </div>
+                                <button type="submit" class="btn btn-lg btn-secondary btn-block">{{ __('Zaloguj') }}</button>
+                                <button type="button" class="btn btn-lg btn-danger btn-block" onclick="window.location='{{ url("/auth/redirect/google") }}'"><i class="fab fa-google"></i>  Google</button>
+                                <button type="button" class="btn btn-lg btn-primary btn-block" onclick="window.location='{{ url("/auth/redirect/facebook") }}'"><i class="fab fa-facebook-f"></i>  Facebook</button>
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn btn-link" href="{{ route('password.request') }}" style="color: #1b4b72">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
-                                </div>
-                            </div>
-                        </div>
+
                     </form>
                 </div>
             </div>
