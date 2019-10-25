@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Auth;
 use Illuminate\Database\Eloquent\Model;
 use \TCG\Voyager\Traits\Translatable;
 use Voyager;
@@ -10,9 +11,8 @@ class EquipmentGallery extends Model
 {
     use Translatable;
 
-    public $table = 'equipment_gallery';
-    public $fillable = ['image,description,name'];
-    protected $translatable = ['description', 'name'];
+    protected $table = 'equipment_gallery';
+    protected $translatable = ['name'];
 
     protected $hidden = [
         'updated_at', 'user_id', 'created_at', 'author,id'
@@ -20,8 +20,8 @@ class EquipmentGallery extends Model
 
     public function save(array $options = [])
     {
-        if (!$this->author_id && app('VoyagerAuth')->user()) {
-            $this->author_id = app('VoyagerAuth')->user()->getKey();
+        if (!$this->author_id && Auth::user()) {
+            $this->author_id = Auth::user()->getKey();
         }
 
         parent::save();

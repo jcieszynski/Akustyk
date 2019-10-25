@@ -151,5 +151,8 @@ return [
     'attributes' => [
         'message' => 'wiadomość',
         'user' => 'nazwa użytkownika',
+        'name' => 'Imię i nazwisko',
+        'password' => 'Hasło',
+        'avatar' => 'awatar'
     ],
 ];

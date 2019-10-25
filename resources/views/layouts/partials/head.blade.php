@@ -11,3 +11,5 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 <link rel="icon" href="{{asset('images/favicon.ico')}}" type="image/x-icon"/>
 <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}" type="image/x-icon"/>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
+<script src="https://cdn.plyr.io/3.5.6/plyr.js" ></script>

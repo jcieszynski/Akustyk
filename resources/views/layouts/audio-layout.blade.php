@@ -12,8 +12,12 @@
         <div class="list-group list-group-flush">
             @foreach($category as $categories)
                 @if($categories->visible)
-                <a href="{{route('music')}}{{'/'. $categories->name}}" class="list-group-item list-group-item-action  {{ (request()->is('music/'. $categories->name)) ? 'active' : '' }}">{{$categories->name}}</a>
-          @endif
+                    @if(request()->is('audio-files') || request()->is('audio-files/*'))
+                        <a href="{{\Illuminate\Support\Facades\URL::to('audio-files')}}{{'/' . \App\MusicCategory::replaceDiactiticChars(mb_strtolower($categories->name))}}" class="list-group-item list-group-item-action  {{ (request()->is('music/'. $categories->name)) ? 'active' : '' }}">{{$categories->name}}</a>
+                    @else
+                        <a href="{{route('music')}}{{'/' . \App\MusicCategory::replaceDiactiticChars(mb_strtolower($categories->name))}}" class="list-group-item list-group-item-action  {{ (request()->is('music/'. $categories->name)) ? 'active' : '' }}">{{$categories->name}}</a>
+                    @endif
+                @endif
             @endforeach
         </div>
     </div>
