@@ -53,13 +53,12 @@
                     <input type="text" class="form-control" id="name" name="name" placeholder="{{__('Name')}}"
                            value="{{$user->name}}">
                 </div>
-                <div class="form-group">
-                    <label for="Password">{{__('Password')}}</label>
                     @if($user->provider == 'laravel')
-                        <input type="password" class="form-control" id="password" name="password"
-                               placeholder="Password">
-                    @endif
-                </div>
+                    <div class="form-group">
+
+                    <input type="password" class="form-control" id="password" name="password" placeholder="{{__('Password')}}">
+                    </div>
+                @endif
                 <button type="submit" class="btn btn-danger">{{__('Submit')}}</button>
             </form>
         </div>
