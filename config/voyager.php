@@ -184,7 +184,7 @@ return [
     |
     */
 
-    'primary_color' => '#FF0000',
+    'primary_color' => '#000',
 
     'show_dev_tips' => true, // Show development tip "How To Use:" in Menu and Settings
 
@@ -194,7 +194,7 @@ return [
     ],
 
     'additional_js' => [
-        //'js/custom.js',
+        '/js/tiny.js',
     ],
 
     'googlemaps' => [
