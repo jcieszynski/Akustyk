@@ -46,7 +46,7 @@ class UserController extends Controller
         if ($request->name) {
             $this->validate($request, [
 
-                'name' => 'string|min:8|required|max:60',
+                'name' => 'string|min:8|required|max:60|profanity',
 
             ]);
             $user->name = request('name');

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4d1951f3f92a9d39406f60931dd870c9",
+    "content-hash": "8bba2b8531e250aaecf42f85fff9f8ff",
     "packages": [
         {
             "name": "alariva/laravel-email-domain-blacklist",
@@ -176,6 +176,52 @@
                 "widgets"
             ],
             "time": "2019-03-25T14:20:55+00:00"
+        },
+        {
+            "name": "askedio/laravel5-profanity-filter",
+            "version": "1.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Askedio/laravel-profanity-filter.git",
+                "reference": "34bec8cd92e998015e73a90d888ef981b0ed749a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Askedio/laravel-profanity-filter/zipball/34bec8cd92e998015e73a90d888ef981b0ed749a",
+                "reference": "34bec8cd92e998015e73a90d888ef981b0ed749a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "laravel/laravel": "5.*",
+                "phpunit/phpunit": "~5.0",
+                "symfony/css-selector": "3.1.*",
+                "symfony/dom-crawler": "3.1.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Askedio\\Laravel5ProfanityFilter\\Providers\\ProfanityFilterServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Askedio\\Laravel5ProfanityFilter\\": "app/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL-3.0"
+            ],
+            "description": "A Vendor Package Example",
+            "keywords": [
+                "laravel"
+            ],
+            "time": "2018-10-19T16:07:02+00:00"
         },
         {
             "name": "caouecs/laravel-lang",

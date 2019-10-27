@@ -10,7 +10,7 @@
     <img class="mr-3 logged-avatar" src="{{\App\User::getAvatarPath($comment->commenter_id) ? \App\User::getAvatarPath($comment->commenter_id) :'https://www.gravatar.com/avatar/'.md5($comment->guest_email).'.jpg?s=64'}}" alt="{{ $comment->commenter->name ?? $comment->guest_name ?? __('Deleted account') }} Avatar">
     <div class="media-body">
         <h5 class="mt-0 mb-1">{{ $comment->commenter->name ?? $comment->guest_name ?? __('Deleted account') }} <small class="text-muted">- {{ $comment->created_at->diffForHumans() }}</small></h5>
-        <div style="white-space: pre-wrap;">{!! $markdown->line($comment->comment) !!}</div>
+        <div style="white-space: pre-wrap;">{!! $markdown->line(app('profanityFilter')->filter($comment->comment)) !!}</div>
 
         <div>
             @can('reply-to-comment', $comment)
@@ -44,7 +44,7 @@
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label for="message">{{__('Update your message here:')}}</label>
-                                    <textarea required class="form-control" name="message" rows="3">{{ $comment->comment }}</textarea>
+                                    <textarea required class="form-control" name="message" rows="3">{{$comment->comment}}</textarea>
                                     <small class="form-text text-muted"><a class="markdown-color" target="_blank" href="https://help.github.com/articles/basic-writing-and-formatting-syntax">Markdown</a> {{__('cheatsheet')}}.</small>
                                 </div>
                             </div>

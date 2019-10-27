@@ -26,7 +26,7 @@ class CommentPolicy
      */
     public function delete($user, Comment $comment): bool
     {
-        if ($user->role_id == 1 || $user->role_id == 3) {
+        if ($user->hasPermission('browse_admin')) {
             return true;
         }
         return $user->id == $comment->commenter_id;
