@@ -21,7 +21,6 @@
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.8.0",
         "laravelista/comments": "^3.1",
-        "spatie/laravel-cookie-consent": "^2.10",
         "tcg/voyager": "^1.2"
     },
     "require-dev": {
