@@ -13,3 +13,4 @@
 <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}" type="image/x-icon"/>
 <link rel="stylesheet" href="https://cdn.plyr.io/3.5.6/plyr.css" />
 <script src="https://cdn.plyr.io/3.5.6/plyr.js" ></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />

@@ -28,7 +28,17 @@
 </ul>
 
 @auth
-    @include('comments::_form')
+    @if( Auth::check() && (!auth()->user()->email_verified_at == null))
+        @include('comments::_form')
+    @else
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{__('Verify your account')}}</h5>
+                <p class="card-text">{{__('You must verify your account to comment')}}.</p>
+                <a href="/email/verify" class="btn btn-primary">{{__('Verify account')}}</a>
+            </div>
+        </div>
+    @endif
 @elseif(config('comments.guest_commenting') == true)
     @include('comments::_form', [
         'guest_commenting' => true

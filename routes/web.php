@@ -25,6 +25,7 @@ Route::get('/', function () {
 
 Route::get('/auth/redirect/{provider}', 'SocialController@redirect');
 Route::get('/callback/{provider}', 'SocialController@callback');
+Route::post('comments', config('comments.controller') . '@store')->middleware('verified');
 Route::get('profile', 'UserController@profile');
 Route::post('profile', 'UserController@update_profile');
 Route::get('contact-us', 'ContactFormController@ContactForm');
