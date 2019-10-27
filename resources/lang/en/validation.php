@@ -150,5 +150,6 @@ return [
     */
 
     'attributes' => [],
+    'profanity' => 'Tou cannot use this word'
 
 ];

@@ -155,4 +155,5 @@ return [
         'password' => 'Hasło',
         'avatar' => 'awatar'
     ],
+    'profanity' => 'Nie można użyć tego słowa'
 ];
