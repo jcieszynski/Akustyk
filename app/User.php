@@ -2,12 +2,10 @@
 
 namespace App;
 
-use GuzzleHttp\Psr7\Uri;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravelista\Comments\Commenter;
-use TCG\Voyager\Traits\VoyagerUser;
 
 class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
 {

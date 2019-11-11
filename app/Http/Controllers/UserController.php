@@ -38,7 +38,7 @@ class UserController extends Controller
         if ($request->password) {
             $this->validate($request, [
 
-                'password' => 'min:8|max:50|required',
+                'password' => 'min:8|max:50|required|numbers|case_diff',
             ]);
             $user->password = bcrypt($request->password);
         }

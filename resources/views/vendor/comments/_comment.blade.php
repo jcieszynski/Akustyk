@@ -74,7 +74,7 @@
                                 <div class="form-group">
                                     <label for="message">{{__('Enter your message here:')}}</label>
                                     <textarea required class="form-control" name="message" rows="3"></textarea>
-                                    <small class="form-text text-muted"><a target="_blank" href="https://help.github.com/articles/basic-writing-and-formatting-syntax">Markdown</a> {{__('cheatsheet')}}.</small>
+                                    <small class="form-text text-muted"><a class="markdown-color" target="_blank" href="https://help.github.com/articles/basic-writing-and-formatting-syntax">Markdown</a> {{__('cheatsheet')}}.</small>
                                 </div>
                             </div>
                             <div class="modal-footer">

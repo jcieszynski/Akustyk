@@ -76,6 +76,7 @@
                                 </span>
                             @endif
                         </div>
+                <p>{{__('Password : Minimum 8 chars - use 1 number, 1 big letter, 1 small letter')}}</p>
                     </form>
                 </div>
             </div>
