@@ -19,14 +19,15 @@ class ContactFormController extends Controller
 
     public function contactFormPost(Request $request)
     {
-        $agent = new Agent();
-
         $this->validate($request, [
-            'user' => 'required|string|min:3|max:50',
+            'user' => 'required|string|min:3|max:60',
             'email' => 'required|email|blacklist|max:100',
             'message' => 'required|min:10',
             'g-recaptcha-response' => 'required|captcha'
         ]);
+
+        $agent = new Agent();
+
         $browser = $agent->browser();
         $browserVersion = $agent->version($browser);
         $platform = $agent->platform();

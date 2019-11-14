@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                         </div>
-                                <button type="submit" class="btn btn-lg btn-secondary btn-block">{{ __('Zaloguj') }}</button>
+                                <button type="submit" class="btn btn-lg btn-secondary btn-block">{{ __('Login') }}</button>
                                 <button type="button" class="btn btn-lg btn-danger btn-block" onclick="window.location='{{ url("/auth/redirect/google") }}'"><i class="fab fa-google"></i>  Google</button>
                                 <button type="button" class="btn btn-lg btn-primary btn-block" onclick="window.location='{{ url("/auth/redirect/facebook") }}'"><i class="fab fa-facebook-f"></i>  Facebook</button>
                                 @if (Route::has('password.request'))

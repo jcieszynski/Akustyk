@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-md-4 col-lg-4 offset-lg-1 footer-contact ">
                     <h3>{{__('Contact')}}</h3>
-                    <p><i class="fas fa-map-marker-alt"></i>Ul. Grunwaldzka 1 {{__('room')}} 010, 82-300 {{__('Elblag')}}</p>
+                    <p><i class="fas fa-map-marker-alt"></i>Ul. Grunwaldzka 1 {{__('room')}} 09, 82-300 {{__('Elblag')}}</p>
                     <p><i class="fas fa-envelope"></i> Email: <a href="mailto:akustykwsz@gmail.com">akustykpwsz@gmail.com</a></p>
               <p><i class="fab fa-wpforms"></i><a href="{{URL::to('contact-us')}}">{{__('Write a contact form')}}</a></p><p>
                       <p><i class="fas fa-hourglass-start"></i>{{__('Friday')}} {{__('from 4 pm')}}</p>
