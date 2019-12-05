@@ -55,15 +55,11 @@ class SocialController extends Controller
 
         return $user = User::create([
             'name' => $socialUser->name,
-            'password' => bcrypt($socialUser->email),
             'email' => $socialUser->email,
             'email_verified_at' => Carbon::now()->toDateTimeString(),
             'avatar' => $socialUser->avatar,
             'provider' => $provider,
             'provider_id' => $socialUser->id,
-            'last_login' => Carbon::now()->toDateTimeString(),
         ]);
-
-
     }
 }

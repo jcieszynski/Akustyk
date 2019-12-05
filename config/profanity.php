@@ -194,6 +194,13 @@ return [
         'cwel',
         'kurwo',
         'jebana',
-        'pierdol'
+        'pierdol',
+        'jebane',
+        'jebaniutki',
+        'pizda',
+        'piździutki',
+        'pizdu',
+        'zajebany'
+
     ],
 ];

@@ -18,7 +18,7 @@
                             <div
                                 class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
                                 {{__('Posted on')}} {{\Carbon\Carbon::parse($post->created_at)->format('M d Y')}} {{__('by')}}
-                                <span>{{ $post->authorId()->first()->name }}</span>
+                                <span>{{ $post->authorId()->first()->name ?? "moderator" }}</span>
                             </div>
                         </div>
                     </div>

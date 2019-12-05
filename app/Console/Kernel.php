@@ -27,9 +27,6 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
-
         $schedule->command('blacklist:update-email-domains')
             ->monthly()
             ->saturdays()
@@ -38,8 +35,9 @@ class Kernel extends ConsoleKernel
             ->sendOutputTo(storage_path('logs/email-domains-blacklist.txt'));
 
         $schedule->call(function () {
-            DB::table('users')->where('last_login', '<=', Carbon::now()->subYears(1))->delete();
-        })->yearly()->sendOutputTo(storage_path('logs/konta_del.txt'));
+            DB::table('users')->where('last_login', '<=',
+                Carbon::now()->subYears(1))->delete();
+        })->monthly()->sundays()->at('08:00')->sendOutputTo(storage_path('logs/konta_del.txt'));
 
     }
 
