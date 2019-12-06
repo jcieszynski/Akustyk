@@ -10,7 +10,7 @@ class AudioController extends Controller
 
     public function index()
     {
-        $audio = AudioEmbed::paginate(10);
+        $audio = AudioEmbed::orderBy('created_at','desc')->paginate(10);
         $category = MusicCategory::all();
         return view('audio')->with(compact('audio', 'category'));
     }

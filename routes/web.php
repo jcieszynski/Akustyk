@@ -44,18 +44,22 @@ Route::get('music/{category}', function ($musicCategory) {
     }
     $id = $musicEmbedCategories->id;
     $category = \App\MusicCategory::all();
-    $audio = DB::table('audio_embed')->where('category_id', $id)->where('visible', true)->paginate(10);
+    $audio = DB::table('audio_embed')->where('category_id', $id)->where('visible', true)
+        ->orderBy('created_at', 'desc')->paginate(10);
     return view('audio', compact('audio', 'category'));
 });
 
 Route::get('audio-files/{category}', function ($musicCategory) {
-    $musicCategories = DB::table('music_category')->where('name', $musicCategory)->where('visible', true)->first();
+    $musicCategories = DB::table('music_category')->where('name', $musicCategory)
+        ->where('visible', true)->first();
     if (!$musicCategories) {
         return abort('404');
     }
     $id = $musicCategories->id;
     $category = \App\MusicCategory::all();
-    $music = DB::table('music_collection')->where('category_id', $id)->where('visible', true)->paginate(10);
+    $music = DB::table('music_collection')->where('category_id', $id)
+        ->where('visible', true)
+        ->orderBy('created_at', 'desc')->paginate(10);
     return view('audio-files', compact('music', 'category'));
 })->name('audio-files')->middleware('verified');
 

@@ -28,7 +28,8 @@ class MusicCollection extends Model
         if ($this->created_at == $this->updated_at) {
             if ($this->checkMimeInString()) {
                 $originalName = json_decode($this->path)[0]->original_name;
-                $this->name = strpos($originalName, 'mp3') ? explode('.mp3', $originalName)[0] : explode('.wav', $originalName)[0];
+                $this->name = strpos($originalName, 'mp3')
+                    ? explode('.mp3', $originalName)[0] : explode('.wav', $originalName)[0];
                 $this->addCategoryAndAuthor();
             } else {
                 return;

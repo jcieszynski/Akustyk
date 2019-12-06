@@ -9,7 +9,6 @@ use Embed\Embed;
 class AudioEmbed extends Model
 {
     protected $table = 'audio_embed';
-    protected $fillable = ['embed', 'visible'];
     protected $hidden = ['category_id', 'created_at', 'updated_at'];
 
     public function addCategoryAndAuthor()
