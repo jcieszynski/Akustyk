@@ -10,7 +10,7 @@ class AudioFilesController extends Controller
 {
     public function index()
     {
-        $music = MusicCollection::paginate(10)->sortByDesc("created_at");
+        $music = MusicCollection::orderBy('created_at','desc')->paginate(10);
         $category = MusicCategory::all();
         return view('audio-files')->with(compact('music', 'category'));
 
