@@ -49,13 +49,12 @@
                            class="form-text text-muted">{{__('Please upload a valid image file. Size of image should not be more than 2MB.')}}</small>
                 </div>
                 <div class="form-group">
-                    <label for="text">{{__('Name')}}</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="{{__('Name')}}"
-                           value="{{$user->name}}">
+                    <label for="text">{{__('Username')}}</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="{{__('Username')}}">
                 </div>
                     @if($user->provider == 'laravel')
                     <div class="form-group">
-
+                        <label for="text">{{__('Password')}}</label>
                     <input type="password" class="form-control" id="password" name="password" placeholder="{{__('Password')}}">
                     </div>
                 @endif
