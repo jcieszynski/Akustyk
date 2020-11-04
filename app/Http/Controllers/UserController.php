@@ -54,6 +54,9 @@ class UserController extends Controller
 
         $user->save();
 
+        if ((!$request->name && !$request->password) || (!$request->name && $user->provider != 'laravel')) {
+            return back()->withErrors(__('Complete the data'));
+        }
         return back()->with('success', __('You have successfully changed information'));
     }
 
