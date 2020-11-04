@@ -27,7 +27,7 @@ What has been done:
 - captcha system
 - send email messages to users
 - Layout
-- Translates pl/en
+- Translations pl/en
 - comments system
 - contact form
 - photo gallery
