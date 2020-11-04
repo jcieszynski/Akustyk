@@ -26,8 +26,8 @@ What has been done:
 - login using Google and Facebook account
 - captcha system
 - send email messages to users
-- Layout
-- Translations pl/en
+- layout
+- translations pl/en
 - comments system
 - contact form
 - photo gallery
