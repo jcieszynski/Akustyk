@@ -25,7 +25,8 @@ class VoyagerUserController extends \TCG\Voyager\Http\Controllers\VoyagerUserCon
         $user = User::where('id', $id)->first();
         $request->merge([
             'provider' => $user->provider,
-            'email_verified_at' => $user->email_verified_at
+            'email_verified_at' => $user->email_verified_at,
+            'last_login' => $user->last_login
         ]);
 
         if ($user->provider != 'laravel' && !empty($request->password)) {
