@@ -150,6 +150,7 @@ return [
     */
 
     'attributes' => [],
-    'profanity' => 'Tou cannot use this word'
+    'profanity' => 'Tou cannot use this word',
+    'admin-panel-social-pw' => 'Cannot change password in social account, change must be applied the provider side'
 
 ];
