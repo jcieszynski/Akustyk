@@ -155,5 +155,6 @@ return [
         'password' => 'Hasło',
         'avatar' => 'awatar'
     ],
-    'profanity' => 'Nie można użyć tego słowa'
+    'profanity' => 'Nie można użyć tego słowa',
+    'admin-panel-social-pw' => 'Nie można zmienić hasła na koncie Social, zmiana musi nastąpić po stronie dostawcy'
 ];
