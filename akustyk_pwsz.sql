@@ -101,21 +101,10 @@ CREATE TABLE `comments` (
 INSERT INTO `comments` (`id`, `commenter_id`, `commenter_type`, `guest_name`, `guest_email`, `commentable_type`, `commentable_id`, `comment`, `approved`, `child_id`, `created_at`, `updated_at`) VALUES
 (1, '17', 'App\\User', NULL, NULL, 'App\\Post', '3', 'Zapraszamy', 1, NULL, '2019-10-17 20:29:04', '2019-10-17 20:29:04'),
 (2, '17', 'App\\User', NULL, NULL, 'App\\Post', '2', '***Super***', 1, NULL, '2019-10-17 20:33:16', '2019-10-17 20:33:16'),
-(3, '2', 'App\\User', NULL, NULL, 'App\\Post', '2', 'dupa', 1, 2, '2019-10-19 06:33:34', '2019-10-19 06:33:34'),
+(3, '2', 'App\\User', NULL, NULL, 'App\\Post', '2', 'jeden', 1, 2, '2019-10-19 06:33:34', '2019-10-19 06:33:34'),
 (6, '21', 'App\\User', NULL, NULL, 'App\\Post', '3', 'nieźle :)', 1, NULL, '2019-10-23 21:58:56', '2019-10-23 21:58:56'),
 (7, '21', 'App\\User', NULL, NULL, 'App\\Post', '3', 'ddd', 1, 1, '2019-10-23 21:59:13', '2019-10-23 21:59:13'),
 (9, '21', 'App\\User', NULL, NULL, 'App\\Post', '4', 'fajniee', 1, NULL, '2019-10-27 13:06:42', '2019-10-27 17:19:56'),
-(10, '17', 'App\\User', NULL, NULL, 'App\\Post', '4', 'Dobry artykuł', 1, NULL, '2019-10-27 17:18:28', '2019-12-03 17:25:18'),
-(11, '21', 'App\\User', NULL, NULL, 'App\\Post', '4', 'kurwa mać', 1, NULL, '2019-10-27 17:34:40', '2019-10-27 17:34:49'),
-(12, '21', 'App\\User', NULL, NULL, 'App\\Post', '4', 'Chuj się to', 1, NULL, '2019-10-27 17:36:55', '2019-10-27 17:36:55'),
-(13, '21', 'App\\User', NULL, NULL, 'App\\Post', '4', 'ty kurwo jebana', 1, NULL, '2019-10-27 17:37:05', '2019-10-27 17:37:05'),
-(14, '17', 'App\\User', NULL, NULL, 'App\\Post', '4', 'fajnie kurwo', 1, 13, '2019-10-31 12:42:38', '2019-10-31 12:42:38'),
-(15, '17', 'App\\User', NULL, NULL, 'App\\Post', '4', 'ss', 1, 13, '2019-10-31 12:48:56', '2019-10-31 12:48:56'),
-(16, '17', 'App\\User', NULL, NULL, 'App\\Post', '4', 'ddd', 1, NULL, '2019-12-03 15:34:08', '2019-12-03 15:34:08'),
-(17, '17', 'App\\User', NULL, NULL, 'App\\Post', '4', 'Kurwa mać gówno jebane', 1, NULL, '2019-12-03 23:13:42', '2019-12-03 23:13:42'),
-(18, '17', 'App\\User', NULL, NULL, 'App\\Post', '4', 'W pizdu', 1, NULL, '2019-12-03 23:14:49', '2019-12-03 23:14:49'),
-(19, '17', 'App\\User', NULL, NULL, 'App\\Post', '4', 'Pizda', 1, NULL, '2019-12-03 23:14:58', '2019-12-03 23:14:58'),
-(20, '17', 'App\\User', NULL, NULL, 'App\\Post', '4', 'No żesz kurwa mać', 1, NULL, '2019-12-03 23:16:15', '2019-12-03 23:16:15');
 
 -- --------------------------------------------------------
 
